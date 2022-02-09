@@ -18,3 +18,8 @@ select count(replacement_cost) from film
 select count(title) from film where title LIKE 'T%' AND rating = 'G'
 select country from country where length(country) = 5
 select city from city where city ILIKE '%r' 
+
+-- Part 5
+select title from film where title LIKE '%n'ORDER BY length ASC LIMIT 5
+select title from film where title LIKE '%n'ORDER BY length DESC OFFSET 2 LIMIT 5
+select * from customer where store_id = 1 ORDER BY last_name DESC LIMIT 4
