@@ -11,3 +11,10 @@ select country from country where country LIKE 'A%a'
 select country from country where length(country)>6 AND country LIKE '%n';
 select title from film where title ILIKE '%T%T%T%T%'
 select * from film where title LIKE 'C%' AND length > 90 AND rental_rate = 2.99
+
+-- Part 4
+select DISTINCT replacement_cost from film
+select count(replacement_cost) from film
+select count(title) from film where title LIKE 'T%' AND rating = 'G'
+select country from country where length(country) = 5
+select city from city where city ILIKE '%r' 
