@@ -23,3 +23,9 @@ select city from city where city ILIKE '%r'
 select title from film where title LIKE '%n'ORDER BY length ASC LIMIT 5
 select title from film where title LIKE '%n'ORDER BY length DESC OFFSET 2 LIMIT 5
 select * from customer where store_id = 1 ORDER BY last_name DESC LIMIT 4
+
+-- Part 6
+select round(avg(rental_rate),2) from film
+select count(title) from film where title LIKE 'C%'
+select MAX(length) from film where rental_rate = 0.99
+select DISTINCT(count(replacement_cost)) from film where length > 150
