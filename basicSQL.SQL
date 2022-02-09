@@ -5,3 +5,9 @@ select f.title, f.description from film f where f.length > 60 AND f.length < 75
 select * from film where replacement_cost between 12.99 AND 16.98
 select first_name , last_name from actor where first_name IN ('Penelope', 'Nick', 'Ed')
 select * from film where rental_rate IN (0.99, 2.99, 4.99) AND replacement_cost IN (12.22, 15.99, 28.99)
+
+-- Part 3
+select country from country where country LIKE 'A%a'
+select country from country where length(country)>6 AND country LIKE '%n';
+select title from film where title ILIKE '%T%T%T%T%'
+select * from film where title LIKE 'C%' AND length > 90 AND rental_rate = 2.99
