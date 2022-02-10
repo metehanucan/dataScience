@@ -60,5 +60,10 @@ select city, country from city INNER JOIN country on country.country_id = city.c
 select payment_id, first_name, last_name from payment INNER JOIN customer on payment.customer_id = customer.customer_id
 select rental_id, first_name, last_name from customer INNER JOIN rental on rental.customer_id = customer.customer_id
 
+-- Part 10
+select city, country from country LEFT JOIN city on city.country_id = country.country_id
+select payment_id, first_name, last_name from customer RIGHT JOIN payment on payment.customer_id = customer.customer_id
+select rental_id, first_name, last_name from customer FULL JOIN rental on rental.customer_id = customer.customer_id
+
 
 		
