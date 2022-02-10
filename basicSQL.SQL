@@ -73,6 +73,13 @@ select first_name from actor UNION ALL select first_name from customer
 select first_name from actor INTERSECT ALL select first_name from customer
 select first_name from actor EXCEPT ALL select first_name from customer
 
+-- Part 12
+select count(*) from film where length = (select round(avg(length),0) from film)
+select count(*) from film where rental_rate = (select max(rental_rate) from film)
+select * from film where rental_rate = (select min(rental_rate) from film) AND replacement_cost = (select min(replacement_cost) from film)
+select first_name, last_name from customer where customer_id = ANY (select customer_id from payment group by customer_id ORDER BY count(payment_id) DESC)
+
+
 
 
 		
