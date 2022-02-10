@@ -65,5 +65,14 @@ select city, country from country LEFT JOIN city on city.country_id = country.co
 select payment_id, first_name, last_name from customer RIGHT JOIN payment on payment.customer_id = customer.customer_id
 select rental_id, first_name, last_name from customer FULL JOIN rental on rental.customer_id = customer.customer_id
 
+-- Part 11
+select first_name from actor UNION select first_name from customer
+select first_name from actor INTERSECT select first_name from customer
+select first_name from actor EXCEPT select first_name from customer
+select first_name from actor UNION ALL select first_name from customer
+select first_name from actor INTERSECT ALL select first_name from customer
+select first_name from actor EXCEPT ALL select first_name from customer
+
+
 
 		
